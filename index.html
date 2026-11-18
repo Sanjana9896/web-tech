@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f5faf7">
+  <title>Medicare — Salesperson portal</title>
+  <link rel="stylesheet" href="./styles.css">
+</head>
+<body>
+<div class="app">
+  <aside class="sidebar">
+    <div class="brand">
+      <div class="brandmark">
+        M+
+      </div>
+      <div>
+        <strong>
+          Medicare
+        </strong>
+        <small>
+          Salesperson portal
+        </small>
+      </div>
+    </div>
+    <nav class="nav" id="nav">
+      <div class="nav-label">
+        OVERVIEW
+      </div>
+      <a class="active" href="#dashboard" onclick="go('dashboard');return false">
+        <span class="icon">
+          ▦
+        </span>
+        Dashboard
+      </a>
+      <div class="nav-label" style="margin-top:8px">
+        WORKSPACE
+      </div>
+      <a href="#inventory" onclick="go('inventory');return false">
+        <span class="icon">
+          ◉
+        </span>
+        Medicine inventory
+      </a>
+      <a href="#pending" onclick="go('pending');return false">
+        <span class="icon">
+          ☷
+        </span>
+        Paid pending orders
+        <span class="badge">
+          7
+        </span>
+      </a>
+      <a href="#process" onclick="go('process');return false">
+        <span class="icon">
+          ☑
+        </span>
+        Process order
+      </a>
+      <a href="#delivery" onclick="go('delivery');return false">
+        <span class="icon">
+          ♧
+        </span>
+        Delivery handoff
+        <span class="badge">
+          3
+        </span>
+      </a>
+    </nav>
+    <div class="user">
+      <div class="avatar">
+        SR
+      </div>
+      <div>
+        <strong>
+          Mohammad Aqil
+        </strong>
+        <small>
+          Salesperson · Counter 2
+        </small>
+      </div>
+      <button class="logout" title="Log out" onclick="toast('You are signed in as Mohammad Aqil')">
+        ⇥
+      </button>
+    </div>
+  </aside>
+  <main class="main">
+    <header class="topbar">
+      <div class="crumb">
+        <small id="crumbLabel">
+          Overview
+        </small>
+        <strong id="crumbTitle">
+          Dashboard
+        </strong>
+      </div>
+      <label class="search">
+        <span>
+          ⌕
+        </span>
+        <input id="search" placeholder="Search medicine or order..." aria-label="Search medicine or order">
+      </label>
+      <button class="topbtn" title="Notifications" onclick="toast('You are all caught up')">
+        ♧
+        <i class="dot">
+        </i>
+      </button>
+      <div class="avatar">
+        SR
+      </div>
+    </header>
+    <section class="content" id="content">
+    </section>
+  </main>
+</div>
+<div id="toastHost">
+</div>
+  <script src="./script.js" defer></script>
+</body>
+</html>
+
